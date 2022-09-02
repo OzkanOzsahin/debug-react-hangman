@@ -21,7 +21,7 @@ class AppContainer extends React.Component {
     maxGuesses: maxGuesses
   };
 
-  chooseWord(list) {
+  choseWord(list) {
     let index = Math.floor(Math.random() * list.length);
     console.log(`We chose word: ${list[index]}`);
     return list[index];
@@ -29,7 +29,7 @@ class AppContainer extends React.Component {
 
   restartGameHandler = event => {
     this.setState({
-      chosenWord: this.chooseWord(wordList),
+      chosenWord: this.choseWord(wordList),
       guessedLetters: [],
       currentChosenLetter: ""
     });

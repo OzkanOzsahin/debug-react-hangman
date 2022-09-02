@@ -1,7 +1,9 @@
 import React from "react";
 
-const TextInput = props => (
-  <form onSubmit={props.submit}>
+const TextInput = props => {
+  console.log(props)
+  return (
+    <form onSubmit={props.submit}>
     <input
       type="text"
       maxLength="1"
@@ -15,6 +17,8 @@ const TextInput = props => (
       disabled={props.gameIsOver ? "disabled" : ""}
     />
   </form>
-);
+  )
+}
+;
 
 export default TextInput;

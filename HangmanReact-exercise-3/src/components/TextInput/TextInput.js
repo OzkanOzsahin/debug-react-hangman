@@ -12,7 +12,7 @@ const TextInput = props => (
     <input
       type="submit"
       value="guess"
-      disabled={props.gameIsOver ? "disabled" : ""}
+      enabled={props.gameIsOver ? "disabled" : ""}
     />
   </form>
 );

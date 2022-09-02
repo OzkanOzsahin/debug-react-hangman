@@ -1,9 +1,9 @@
 import React from "react";
 
 const generateWordDashMix = (word, letters) =>
-  word
+ word
     .split("")
-    .map(letter => (letters.includes(letter) ? letter : "_"))
+    .map(letter => (letters.includes(letter) ? letter : "-"))
     .join(" ");
 
 const ChosenWord = props => (

@@ -10,6 +10,8 @@ import GuessesLeft from "../GuessesLeft/GuessesLeft";
 import WronglyGuessedLetters from "../WronglyGuessedLetters/WronglyGuessedLetters";
 
 const wordGuessed = (word, guessedLetters) => {
+  console.log("you won")
+  console.log(guessedLetters)
   word = word.split("");
   const remaining = word.filter(letter => !guessedLetters.includes(letter));
   return remaining.length === 0;
@@ -28,7 +30,7 @@ const App = props => {
   const gameIsOver = isGameOver(game, wrongLetters, wordWasGuessed);
 
   const gameOver = gameIsOver ? (
-    <GameOver chosenWord={game.chosenWord} wordGuesed={wordWasGuessed} />
+    <GameOver chosenWord={game.chosenWord} wordGuessed={wordWasGuessed} />
   ) : null;
 
   return (
